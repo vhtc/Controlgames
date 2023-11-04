@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body >
+    
     <div class="v1">
         <section id="logotipo">
             <img src="imagens/logotipo header.png" alt="logotipo">
@@ -16,7 +17,7 @@
         </section>
         <section id="menu">
             <nav>
-                <a href="#" id="home">Home -</a>
+                <a href="index.html" id="home">Home -</a>
                 <a href="#" id="meus_jogos">Meus Jogos -</a>
                 <a href="#" id="chat">Chat -</a>
                 <a href="#" id="meuProgresso">Meu Progresso -</a>
@@ -26,20 +27,6 @@
     </div>
     <div class="v2">
         <header>
-            <section id="pesquisa" style="margin-top: 10%;">
-                <div class="alinhamentolupa">
-                    <div>
-                        <input type="text" id="search-text" placeholder="Pesquisar...">
-                    </div>
-                    <div class="alinhamentolupa" style="padding-left: 10px; margin-left: -4.5%;">
-                        <button id="pesquisar-btn"
-                            style="background-color: rgba(0, 0, 255, 0); border: 0; cursor: pointer;">
-                            <img style="height: 25px; width: 25px;" id="lupa-azul" src="imagens/botao/loupe-blue.svg"
-                                alt="">
-                        </button>
-                    </div>
-                </div>
-            </section>
             <section id="login">
 
             </section>
@@ -50,24 +37,43 @@
             <section>
                 <div class="divisao">
                     <div class="linha"></div>
-                    <p>Call of Duty</p>
+                    <p>Game: <span id="gameid"></span></p>
                     <div class="linha"></div>
                 </div>
                 <div>
                     <div style="display: inline-block;">
                         <picture>
-                            <img src="imagens/calf of duty mw.jpg" alt="Ultimo a ser jogado">
+                            <h3><span id="fotoid">x</span></h3>
                         </picture>   
                     </div>
                     <div style="display: inline-block;">
                         <picture>
-                            <h3>* Plataforma: Steam</h3>
-                            <h3>* Status: Jogando</h3>
-                            <h3>* Categoria: Ação, Simulação</h3>
+                            <h3>* Plataforma: <span id="plataformaid"></span></h3>
+                            <h3>* Status: <span id="statusid"></span></h3>
+                            <h3>* Categoria: <span id="categoriaid"></span></h3>
+                            <h3>* Progresso: <span id="progressoid"></span> </h3>
+                            <h3>* Recomendo: <span id="recomendoid"></span></h3>
                         </picture>   
                     </div>
                 </div>
-                
+                <script>
+                    localStorage.getItem('gameid',gameid);
+                        document.getElementById("gameid").innerHTML = localStorage.getItem("gameid");
+                    localStorage.getItem('plataformaid',plataformaid);
+                        document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
+                    localStorage.getItem('statusid',statusid);
+                        document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
+                    localStorage.getItem('categoriaid',categoriaid);
+                        document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
+                    localStorage.getItem('progressoid',progressoid);
+                        document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
+                    localStorage.getItem('recomendoid',recomendoid);
+                        document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
+                    localStorage.getItem('fotoid',fotoid);
+                        document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
+                        document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid;
+                </script>
+                <script src="game.js"></script>
             </section>
 
         </main>
@@ -76,6 +82,7 @@
         </footer>
 
     </div>
+    
 </body>
 
 </html>

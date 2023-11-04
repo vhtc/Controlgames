@@ -37,11 +37,11 @@
                 </div>
             </div>
         </section>
-        
+
     </div>
     <div class="v2">
         <header>
-            
+
             <section id="login">
 
             </section>
@@ -71,13 +71,22 @@
                 </div>
 
                 <div class="imagens_mais_jogados">
-                    <div class="Mais_jogados" onclick="window.open('https://controlgames2.netlify.app/Game.html');">
-                        <a href="#" ><img src="imagens/calf of duty mw.jpg" alt="" ></a>
-                        <p><a href="#">Calf Of Duty</a ></p>
+                    <div class="Mais_jogados">
+
+                        <a id="Game01" href="Game.html" onclick="abrirgame01()"><img src="imagens/calf of duty mw.jpg"
+                                alt="">
+                            <span style="display: none;">CODMW</span>
+                            <span style="display: none;" id="resultado">x</span>
+                        </a>
+                        <p><a href="#">Calf Of Duty</a></p>
                     </div>
 
                     <div class="Mais_jogados">
-                        <a href="#"><img src="imagens/red dead redemption.jpg" alt=""></a>
+                        <a id="Game02" href="Game.html" onclick="abrirgame02()"><img
+                                src="imagens/red dead redemption.jpg" alt="">
+                            <span style="display: none;">REDDR</span>
+                            <span style="display: none;" id="resultado">x</span>
+                        </a>
                         <p><a href="#">Red Dead Redemption 2</a></p>
                     </div>
 
@@ -90,7 +99,10 @@
                         <a href="#"><img src="imagens/war thunder.jpg" alt=""></a>
                         <p><a href="#">War Thunder</a></p>
                     </div>
+                    <script src="game.js"></script>
+                    <!-- chamando js -->
                 </div>
+
 
             </section>
 
