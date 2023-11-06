@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stilos/stylegames.css">
     <title>Control Games</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-
-<body >
-    
-    <div class="v1">
+<body>
+    <header>
         <section id="logotipo">
-            <img src="imagens/logotipo header.png" alt="logotipo">
-            <p>Control_Games</p>
+            <a href="#"><img src="imagens/Logotipo/logotipo header.png" alt="logotipo"></a>
+            <a href="#">Control_Games</a>
         </section>
+
         <section id="menu">
             <nav>
-                <a href="index.html" id="home">Home -</a>
-                <a href="#" id="meus_jogos">Meus Jogos -</a>
-                <a href="#" id="chat">Chat -</a>
-                <a href="#" id="meuProgresso">Meu Progresso -</a>
-                <a href="#Minhas Plataformas" id="minhaPlataforma">Minhas Plataformas </a>
+                <a href="index.html">Home</a>
+                <a href="#">Jogos</a>
+                <a href="#">Chat</a>
+                <a href="#">Progresso</a>
+                <a href="#">Plataformas</a>
             </nav>
         </section>
-    </div>
-    <div class="v2">
-        <header>
-            <section id="login">
 
-            </section>
-        </header>
+        <section id="pesquisa">
+            <input type="text" id="busca-text" placeholder="Pesquisar...">
+            <a id="botao-pesquisar">
+                <img id="lupa-azul" src="imagens/botoes/loupe-blue.svg" alt="" width="25px" height="25px">
+                <img id="lupa-branca" src="imagens/botoes/loupe-white.svg" alt="" width="25px" height="25px">
+                
+            </a>
 
-        <main>
+        </section>
 
-            <section>
-                <div class="divisao">
-                    <div class="linha"></div>
-                    <p>Game: <span id="gameid"></span></p>
-                    <div class="linha"></div>
-                </div>
-                <div>
-                    <div style="display: inline-block;">
-                        <picture>
-                            <h3><span id="fotoid">x</span></h3>
-                        </picture>   
-                    </div>
-                    <div style="display: inline-block;">
-                        <picture>
-                            <h3>* Plataforma: <span id="plataformaid"></span></h3>
-                            <h3>* Status: <span id="statusid"></span></h3>
-                            <h3>* Categoria: <span id="categoriaid"></span></h3>
-                            <h3>* Progresso: <span id="progressoid"></span> </h3>
-                            <h3>* Recomendo: <span id="recomendoid"></span></h3>
-                        </picture>   
-                    </div>
-                </div>
-                <script>
-                    localStorage.getItem('gameid',gameid);
-                        document.getElementById("gameid").innerHTML = localStorage.getItem("gameid");
-                    localStorage.getItem('plataformaid',plataformaid);
-                        document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
-                    localStorage.getItem('statusid',statusid);
-                        document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
-                    localStorage.getItem('categoriaid',categoriaid);
-                        document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
-                    localStorage.getItem('progressoid',progressoid);
-                        document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
-                    localStorage.getItem('recomendoid',recomendoid);
-                        document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
-                    localStorage.getItem('fotoid',fotoid);
-                        document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
-                        document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid;
-                </script>
-                <script src="game.js"></script>
-            </section>
+        <section id="login">
+            <img id="img_usuario" src="imagens/avatar/WhatsApp Image 2023-11-02 at 18.29.34 (2).jpeg" alt="usuario">
+            <p id="usuario_font">Adailton Cerqueira</p>
+            <p id="usuario_font2">Mestre<img id="img_classe" src="imagens/avatar/Medal First Place.png" alt=""></p>
+            
+        </section>
 
-        </main>
+    </header>
+    <main>
+        <section>
+            <div class="divisao">
+                <div class="linha"></div>
+                <p>Jogo</p>
+                <div class="linha"></div>
+            </div>
+            <img src="imagens/Jogos img maior/diablo1.jpeg" alt="Jogo_diablo4">
+            <article class="info">
+                <ul>
+                    <li>Plataforma : Steam</li>
+                    <li>Status : Jogando </li>
+                    <li>Categoria : Ação</li>
+                    <li>Progresso : 50%</li>
+                    <li>Recomendo : Sim</li>
+                    <li>Ano de Lançamento : 2023</li>
+                </ul>
 
-        <footer>
-        </footer>
+                <aside>
+                    <h2>Descrição</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At a quod praesentium distinctio aperiam ad tempora amet provident veniam, ipsam minima voluptate nemo, commodi quidem ullam? Dignissimos eius et aliquam!</p>
+                </aside>
 
-    </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="rodape">
+            <div class="logo">
+                <a href="#"><img src="imagens/Logotipo/logotipo header.png" alt=""></a>
+                <a href="#">Control_Games</a>
+            </div>
+            
+            <div class="links">
+                <a href="#"><img src="imagens/botoes/Customer Support.png" alt="suporte">Suporte</a>
+                <a href="#"><img src="imagens/botoes/Settings.png" alt="configurações">Configurações</a>
+            </div>
+        </section>
+    </footer>
     
 </body>
-
 </html>
