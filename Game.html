@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Stilos/stylegames.css">
     <title>Control Games</title>
+
+    <!-- local onde está as logos das plataformas -->
+    <script src="https://kit.fontawesome.com/994a8be22c.js" crossorigin="anonymous"></script>
+    <!-- fechamento -->
 </head>
 <body>
     <header>
@@ -45,26 +49,61 @@
         <section>
             <div class="divisao">
                 <div class="linha"></div>
-                <p>Jogo</p>
+                <p><span id="gameid"></span></p>
                 <div class="linha"></div>
             </div>
-            <img src="imagens/Jogos img maior/diablo1.jpeg" alt="Jogo_diablo4">
+            <span id="fotoid"></span>
             <article class="info">
                 <ul>
-                    <li>Plataforma : Steam</li>
-                    <li>Status : Jogando </li>
-                    <li>Categoria : Ação</li>
-                    <li>Progresso : 50%</li>
-                    <li>Recomendo : Sim</li>
-                    <li>Ano de Lançamento : 2023</li>
+                    <li>Plataforma : <span id="plataformaid"></span> <span id="plataformaokid"></span></li>
+                    <li>Status : <span id="statusid"></span></li>
+                    <li>Categoria : <span id="categoriaid"></span></li>
+                    <li>Progresso : <span id="progressoid"></span></li>
+                    <li>Recomendo : <span id="recomendoid"></span></li>
+                    <li>Ano de Lançamento : <span id="anoid"></span></li>
                 </ul>
 
                 <aside>
                     <h2>Descrição</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At a quod praesentium distinctio aperiam ad tempora amet provident veniam, ipsam minima voluptate nemo, commodi quidem ullam? Dignissimos eius et aliquam!</p>
+                    <p><span id="descricaoid"></span> </p>
                 </aside>
 
             </article>
+
+            <script>
+                // script para linkar o crud do game na tela game.html 
+                localStorage.getItem('gameid', gameid);
+                document.getElementById("gameid").innerHTML = localStorage.getItem("gameid");
+                localStorage.getItem('plataformaid', plataformaid);
+                document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
+                localStorage.getItem('statusid', statusid);
+                document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
+                localStorage.getItem('categoriaid', categoriaid);
+                document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
+                localStorage.getItem('progressoid', progressoid);
+                document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
+                localStorage.getItem('recomendoid', recomendoid);
+                document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
+                localStorage.getItem('anoid', anoid);
+                document.getElementById("anoid").innerHTML = localStorage.getItem("anoid");
+                localStorage.getItem('descricaoid', descricaoid);
+                document.getElementById("descricaoid").innerHTML = localStorage.getItem("descricaoid");
+                
+                
+                localStorage.getItem('fotoid', fotoid);
+                document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
+                document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid;
+            </script>
+            <!-- Não juntar esses dois scripts -->
+            <script>
+                // script para aparecer a logo da plataforma 
+                localStorage.getItem('plataformaokid', plataformaokid);
+                document.getElementById("plataformaokid").innerHTML = localStorage.getItem("plataformaokid");
+                document.getElementById("plataformaokid").innerHTML = '<span>' + txt + '</span>' + plataformaokid;
+            </script>
+            <!-- abertura onde ta salvo os scripts da tela game.html  -->
+            <script src="game.js"></script>
+
         </section>
     </main>
     <footer>

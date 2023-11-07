@@ -208,8 +208,11 @@ section > img{
 }
 
 .info{
+    /* modificado por vhtc  */
     display: flex;
-    
+    color: #ffffff;
+    text-align: justify;
+    padding: 2%;
 }
 
 ul li{
