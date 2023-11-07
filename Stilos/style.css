@@ -416,7 +416,7 @@ footer{
 }
 
 
-/* media a partir daqui editado por vhtc ------------------------------------------------------------------------------------------------------------------------------------*/
+/* media a partir daqui editado por vhtc */
 @media (max-width: 600px) {
     /* Seção Não Recomendados para dispositivos menores que 600px */
     .Imagens_nrecomendado {
@@ -433,6 +433,7 @@ footer{
     
     .Categoria img {
         width: 100%;
+        height: 300px;
     }
     /* Seção Zerados para dispositivos menores que 600px */
     .Imagens_zerados {
@@ -453,10 +454,11 @@ footer{
     /* Seção Ultimo Jogo e Mais Jogados no momento para dispositivos menores que 600px */
     #ultimo_jogo img, .Mais_jogados img {
         width: 100%;
+        height: 130px;
     }
     
     #botao-jogar {
-        width: 100%;
+        width: 93%;
         margin-top: 10px;
     }
 }
@@ -472,11 +474,7 @@ footer{
         font-size: 1em;
         padding: 5px;
     }
-    
-    #pesquisa {
-        margin-left: 0;
-    }
-    
+        
     #logotipo {
         font-size: 1.2em;
     }
@@ -485,17 +483,15 @@ footer{
 /* Barra de pesquisa responsiva para dispositivos menores que 600px */
 @media (max-width: 600px) {
     #pesquisa {
-        height: 30px;
-        padding: 5px;
+        visibility: hidden;
     }
     
     #busca-text {
-        width: 100%;
+        visibility: hidden;
     }
     
     #botao-pesquisar {
-        width: 30px;
-        height: 30px;
+        visibility: hidden;
     }
 }
 
@@ -506,16 +502,16 @@ footer{
     }
     
     #img_usuario {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
     }
     
     #usuario_font {
-        font-size: 1em;
+        font-size: 0em;
     }
     
     #usuario_font2 {
-        font-size: 1em;
+        font-size: 0em;
     }
 }
 
@@ -537,3 +533,16 @@ footer{
     }
 }
 
+/* Suporte e Configurações da  calsse  "Links" para dispositivos menores que 600px */
+@media (max-width: 600px){
+    .links a{
+        font-size: 0em;
+    }    
+}
+
+/* logotipo control_games da secção logotipo para dispositivos menores que 600px */
+@media (max-width: 600px){
+    #logotipo a{
+        font-size: 0em;
+    }
+}
