@@ -416,6 +416,7 @@ footer{
 
 
 /* media a partir daqui editado por vhtc */
+
 @media (max-width: 600px) {
     /* Seção Não Recomendados para dispositivos menores que 600px */
     .Imagens_nrecomendado {

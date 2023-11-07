@@ -183,7 +183,7 @@ function achar() {
     }
 
     // simplificando imagem pra não ficar grande no código
-        var gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%;">';
+        var gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
 
     //inicio get/set
     localStorage.setItem('gameid', jogoSelecionado.game);

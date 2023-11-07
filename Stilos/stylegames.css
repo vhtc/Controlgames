@@ -264,4 +264,82 @@ footer{
     transform: scale(1.2);
 }
 
+/* media a partir daqui editado por vhtc */
 
+/* Menu responsivo para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #menu {
+        font-size: 1em;
+        padding-left: 0;
+    }
+    
+    #menu nav a {
+        font-size: 1em;
+        padding: 5px;
+    }
+        
+    #logotipo {
+        font-size: 1.2em;
+    }
+}
+
+/* Barra de pesquisa responsiva para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #pesquisa {
+        visibility: hidden;
+    }
+    
+    #busca-text {
+        visibility: hidden;
+    }
+    
+    #botao-pesquisar {
+        visibility: hidden;
+    }
+}
+
+/* Login e Imagem de Usuário responsivos para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #login {
+        padding: 20px;
+    }
+    
+    #img_usuario {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #usuario_font {
+        font-size: 0em;
+    }
+    
+    #usuario_font2 {
+        font-size: 0em;
+    }
+}
+
+/* colocando descrição de baixo das informações do game e dando pequeno espaço entre elas  */
+@media (max-width: 600px){
+    .info{
+        display: inline-block;
+        padding: 2%;
+    }
+    aside{
+        margin-top: 3%;
+    }
+}
+
+/* Suporte e Configurações da  calsse  "Links" para dispositivos menores que 600px */
+@media (max-width: 600px){
+    .links a{
+        font-size: 0em;
+    }    
+    
+}
+
+/* logotipo control_games da secção logotipo para dispositivos menores que 600px */
+@media (max-width: 600px){
+    #logotipo a{
+        font-size: 0em;
+    }
+}
