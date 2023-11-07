@@ -25,7 +25,6 @@ function achar() {
         var foto = 'imagens/Jogos img menor/calf of duty mw.jpg';  //insira link da imagem
     }
     else if (resultado == "RDR2") {
-
         var game = "Red Dead Redemption";
         var plataforma = "Xbox";
         var status1 = 'Jogando';
@@ -103,7 +102,6 @@ function achar() {
         var foto = 'imagens/Jogos img menor/nfs.jpg'
     }
     else if (resultado == 'DtD') {
-        var id = "DtD";
         var game = "Dave the Diver";
         var plataforma = "Steam";
         var status1 = "Jogando";
@@ -115,7 +113,6 @@ function achar() {
         var foto = 'imagens/Jogos img menor/dave.jpg';
     }
     else if (resultado == 'MTaS') {
-        var id = "MTaS";
         var game = "My Time at Sandrock";
         var plataforma = "Steam";
         var status1 = "Jogando";
@@ -127,7 +124,6 @@ function achar() {
         var foto = 'imagens/Jogos img menor/mytime.jpg';
     }
     else if (resultado == 'SnowR') {
-        var id = "SnowR";
         var game = "SnowRunner";
         var plataforma = "Xbox";
         var status1 = "Jogado";
@@ -139,7 +135,6 @@ function achar() {
     var foto = 'imagens/Jogos img menor/snow runner.jpg';
     }
     else if (resultado == 'Stardew') {
-        var id = "Stardew";
         var game = "Stardew Valley";
         var plataforma = "PlayStation";
         var status1 = "Jogado";
@@ -150,12 +145,23 @@ function achar() {
         var descricao = "Um jogo de simulação de fazenda onde os jogadores herdam uma fazenda e podem cultivar colheitas, criar animais, minerar e interagir com os habitantes da cidade. É um jogo relaxante e cheio de atividades para desfrutar.";
     var foto = 'imagens/Jogos img menor/stardewvalley.jpg';
     }
+    else if(resultado == 'Hogwarts'){
+        var game = "Hogwarts Legacy";
+        var plataforma = "PlayStation";
+        var status1 = "Jogado";
+        var categoria = "Ação e Aventura";
+        var progresso = "40%";
+        var recomendo = "Sim";
+        var ano = "2022";
+        var descricao = "Embarque em uma aventura mágica no mundo de Harry Potter. Você é um estudante em Hogwarts e pode explorar o castelo, aprender magias e enfrentar desafios misteriosos. Uma experiência imersiva no universo bruxo.";
+        var foto = 'imagens/Jogos img maior/hogwarts.jpeg';
+    }
 
     // logo de plataformas 
     if (plataforma == 'Steam') {
         var plataformaok = '<a class="fa-brands fa-steam">';
     }
-    else if (plataforma == 'Playstation') {
+    else if (plataforma == 'Playstation' || plataforma == 'PlayStation') {
         var plataformaok = '<a class="fa-brands fa-playstation">';
     }
     else if (plataforma == 'Xbox') {
