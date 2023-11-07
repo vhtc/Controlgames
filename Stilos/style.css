@@ -414,3 +414,126 @@ footer{
 .links a:hover{
     transform: scale(1.2);
 }
+
+
+/* media a partir daqui editado por vhtc */
+@media (max-width: 600px) {
+    /* Seção Não Recomendados para dispositivos menores que 600px */
+    .Imagens_nrecomendado {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Nao_recomendados img {
+        width: 100%;
+    }
+/* Seção Categorias para dispositivos menores que 600px */
+    .Imagens_categoria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Categoria img {
+        width: 100%;
+    }
+    /* Seção Zerados para dispositivos menores que 600px */
+    .Imagens_zerados {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Zerados img {
+        width: 100%;
+    }
+    /* Seção Jogando Agora para dispositivos menores que 600px */
+    .Imagens_jogando_agora {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Jogando_agora img {
+        width: 100%;
+    }
+    /* Seção Ultimo Jogo e Mais Jogados no momento para dispositivos menores que 600px */
+    #ultimo_jogo img, .Mais_jogados img {
+        width: 100%;
+    }
+    
+    #botao-jogar {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Menu responsivo para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #menu {
+        font-size: 1em;
+        padding-left: 0;
+    }
+    
+    #menu nav a {
+        font-size: 1em;
+        padding: 5px;
+    }
+    
+    #pesquisa {
+        margin-left: 0;
+    }
+    
+    #logotipo {
+        font-size: 1.2em;
+    }
+}
+
+/* Barra de pesquisa responsiva para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #pesquisa {
+        height: 30px;
+        padding: 5px;
+    }
+    
+    #busca-text {
+        width: 100%;
+    }
+    
+    #botao-pesquisar {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Login e Imagem de Usuário responsivos para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    #login {
+        padding: 20px;
+    }
+    
+    #img_usuario {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #usuario_font {
+        font-size: 1em;
+    }
+    
+    #usuario_font2 {
+        font-size: 1em;
+    }
+}
+
+/* Imagem de Classe responsiva para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    .link_jogo img {
+        width: 100%;
+    }
+}
+
+/* Tags <a> nos elementos da seção "Mais Jogados no Momento" para dispositivos menores que 600px */
+/* Tags <a> nos elementos da seção "Categorias" para dispositivos menores que 600px */
+@media (max-width: 600px) {
+    .link_jogo {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+    .link_categoria {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+}
+
