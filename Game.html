@@ -49,7 +49,7 @@
         <section>
             <div class="divisao">
                 <div class="linha"></div>
-                <p><span id="gameid"></span></p>
+                <p id="gameid" ></p>
                 <div class="linha"></div>
             </div>
             <span id="fotoid"></span>
@@ -61,6 +61,7 @@
                     <li>Progresso : <span id="progressoid"></span></li>
                     <li>Recomendo : <span id="recomendoid"></span></li>
                     <li>Ano de Lançamento : <span id="anoid"></span></li>
+                    <li>Versão : <span id="versaoid"></span></li>
                 </ul>
 
                 <aside>
@@ -72,25 +73,17 @@
 
             <script>
                 // script para linkar o crud do game na tela game.html 
-                localStorage.getItem('gameid', gameid);
                 document.getElementById("gameid").innerHTML = localStorage.getItem("gameid");
-                localStorage.getItem('plataformaid', plataformaid);
                 document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
-                localStorage.getItem('statusid', statusid);
                 document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
-                localStorage.getItem('categoriaid', categoriaid);
                 document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
-                localStorage.getItem('progressoid', progressoid);
                 document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
-                localStorage.getItem('recomendoid', recomendoid);
                 document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
-                localStorage.getItem('anoid', anoid);
                 document.getElementById("anoid").innerHTML = localStorage.getItem("anoid");
-                localStorage.getItem('descricaoid', descricaoid);
+                document.getElementById("versaoid").innerHTML = localStorage.getItem("versao");
                 document.getElementById("descricaoid").innerHTML = localStorage.getItem("descricaoid");
                 
-                
-                localStorage.getItem('fotoid', fotoid);
+                localStorage.getItem('fotoid', fotoid); 
                 document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
                 document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid;
             </script>

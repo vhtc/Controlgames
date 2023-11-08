@@ -154,38 +154,32 @@ var jogosJSON = {
         "recomendo": "Sim",
         "ano": "2022",
         "descricao": "Embarque em uma aventura mágica no mundo de Harry Potter. Você é um estudante em Hogwarts e pode explorar o castelo, aprender magias e enfrentar desafios misteriosos. Uma experiência imersiva no universo bruxo.",
-        "foto": 'imagens/Jogos img maior/hogwarts.jpeg'
+        "foto": 'imagens/Jogos img maior/hogwarts.jpeg',
+        "versao": 'Digital'
     }
 }
 
-var Games, Gamesid, jogoSelecionado; //Variavel global, não mexer
+var Gamesid, jogoSelecionado, plataformaok, jogoSelecionado, gameimg; //Variavel global, não mexer
 
 function abrirgame(Jogo) {
-    var Gamesid = Jogo.id;
-    localStorage.setItem('Gamesid', Gamesid);
-    achar();
-}
-//FIm
-function achar() {
-    var game, plataforma, plataformaok, status1, categoria, progresso, recomendo, ano, descricao, foto, gameimg;
-    var resultado = localStorage.getItem('Gamesid', Games);
 
-    var jogoSelecionado = jogosJSON[resultado];
-    
+    jogoSelecionado = jogosJSON[Jogo.id];
+
     if (jogoSelecionado.plataforma == 'Steam') {
-        var plataformaok = '<a class="fa-brands fa-steam">';
+        plataformaok = '<a class="fa-brands fa-steam">'; /*Logo da steam sendo colada  na varaivel plataformak , o mesmo raciocinio acontece nos elses abaixo */
     }
     else if (jogoSelecionado.plataforma == 'Playstation' || jogoSelecionado.plataforma == 'PlayStation') {
-        var plataformaok = '<a class="fa-brands fa-playstation">';
+        plataformaok = '<a class="fa-brands fa-playstation">';
     }
     else if (jogoSelecionado.plataforma == 'Xbox') {
-        var plataformaok = '<a class="fa-brands fa-xbox">';
+        plataformaok = '<a class="fa-brands fa-xbox">';
     }
 
     // simplificando imagem pra não ficar grande no código
-        var gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
+    gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
 
     //inicio get/set
+
     localStorage.setItem('gameid', jogoSelecionado.game);
     localStorage.setItem('plataformaid', jogoSelecionado.plataforma);
     localStorage.setItem('plataformaokid', plataformaok);
@@ -196,5 +190,7 @@ function achar() {
     localStorage.setItem('anoid', jogoSelecionado.ano);
     localStorage.setItem('descricaoid', jogoSelecionado.descricao);
     localStorage.setItem('fotoid', gameimg);
+    localStorage.setItem('versao', jogoSelecionado.versao);
     //Fim Get/Set
 }
+//FIm
