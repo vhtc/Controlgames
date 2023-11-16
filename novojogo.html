@@ -49,13 +49,75 @@
                 <p>Minha Biblioteca</p>
                 <div class="linha"></div>
             </div>
-            <div 
-                class="Jogos" id="games">
-            </div>
+            <h2 style="color: white;">Adicionar Game</h2>
             </div>
         </section>
+
+        <section style="color: white;">
+            <form class="formgame" id="formGame">
+                <div>
+                    <label for="id">ID do Game:</label>
+                    <input type="text" id="id" name="id" required>
+                </div>
+                <div>
+                <label for="game">Nome do Game:</label>
+                <input type="text" id="game" name="game" required>
+            </div>
+            <div>
+                <label for="foto">Url da capa:</label>
+                <input type="text" id="foto" name="foto" required>
+            </div>
+            <div>
+                <label for="plataforma">Plataforma:</label>
+                <select name="plataforma" id="plataforma">
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+            <div>
+                <label for="status1">Status:</label>
+                <select name="status1" id="status1">
+                    <option value="Jogando">Jogando</option>
+                    <option value="Jogado">Jogado</option>
+                    <option value="Parado">Parado</option>
+                </select>
+            </div>
+            <div>
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" name="categoria" required>
+            </div>
+            <div>
+                <label for="progresso">Progresso:</label>
+                <input type="text" id="progresso" name="progresso" required>
+            </div>
+            <div>
+                <label for="recomendo">Recomendo:</label>
+                <select name="recomendo" id="recomendo">
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
+            <div>
+                <label for="ano">Ano de Lançamento:</label>
+                <input type="date" id="ano" name="ano" required>
+            </div>
+            <div>
+                <label for="versao">Versão:</label>
+                <select name="versao" id="versao">
+                    <option value="Digital">Digital</option>
+                    <option value="Física">Física</option>
+                </select>
+            </div>
+            <div>
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" required>
+            </div>
+            </form>
+        </section>
         <section id="botao_cadastrar_jogo">
-            <a href="novojogo.html">Cadastrar Novo Jogo</a>
+            <a href="" onclick="adicionarGame()">Cadastrar Novo Jogo</a>
         </section>
 
 
