@@ -1,12 +1,11 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Salsa&display=swap');
 
 :root{
     --cor0: #020416;
-    --cor1: #010A26;
+    --cor1: #010a26;
     --cor2: #0d9fff;
     --cor3: #00484f;
     --cor4: #1c004f;
@@ -44,7 +43,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     font-family: var(--fonte-titulo);
-    font-size: 1.6em;
+    font-size: 1.6vw;
     font-weight: 400;
 }
 
@@ -54,9 +53,9 @@ header{
 }
 
 #menu{
-    padding-left: 4vw;
+    padding-left: 2vw;
     font-family: var(--fonte-titulo2);
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 #menu nav  a{
@@ -76,7 +75,8 @@ header{
 }
 
 #pesquisa{
-    margin-left: 4vw;
+    margin-left: 2vw;
+    padding: 10px;
 }
 
 
@@ -113,8 +113,8 @@ header{
 #pesquisa{
     background-color: white;
     height: 30px;
-    padding: 10px;
     border-radius: 50px;
+    padding: 10px;
 
     display: flex;
     justify-content: space-between;
@@ -143,8 +143,7 @@ header{
 }
 
 #pesquisa:hover > #busca-text{
-    width: 200px;
-    padding-left: 20px;
+    width: 180px;
 }
 
 #pesquisa:hover > #botao-pesquisar{
@@ -170,7 +169,6 @@ main{
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-    background-color: var(--cor1);
     padding: 20px;
     text-align: center;
 }
@@ -210,7 +208,8 @@ main{
 
 #ultimo_jogo img{
     width: 99%;
-    border-radius: 20px ;    
+    border-radius: 20px ;
+    
 }
 
 #botao-jogar{
@@ -261,7 +260,7 @@ main{
     font-family: var(--fonte-padrao);
     font-weight: 600;
     color: white;
-    font-size: 1vw;
+    font-size: 16px;
     transition-duration: 0.8s;
     padding: 5px;
 }
@@ -334,7 +333,7 @@ main{
     font-family: var(--fonte-padrao);
     font-weight: 600;
     color: white;
-    font-size: 1vw;
+    font-size: 16px;
     transition-duration: 0.8s;
     padding: 5px;
 }
@@ -415,94 +414,51 @@ footer{
 }
 
 
-/* media a partir daqui editado por vhtc */
+/*Media queries ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 600px) {
+@media(max-width: 900px){
     /* Seção Não Recomendados para dispositivos menores que 600px */
-    .Imagens_nrecomendado {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .Nao_recomendados img {
-        width: 100%;
-    }
-/* Seção Categorias para dispositivos menores que 600px */
-    .Imagens_categoria {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .Categoria img {
-        width: 100%;
-        height: 300px;
-    }
-    /* Seção Zerados para dispositivos menores que 600px */
-    .Imagens_zerados {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .Zerados img {
-        width: 100%;
-    }
-    /* Seção Jogando Agora para dispositivos menores que 600px */
-    .Imagens_jogando_agora {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .Jogando_agora img {
-        width: 100%;
-    }
-    /* Seção Ultimo Jogo e Mais Jogados no momento para dispositivos menores que 600px */
 
-    .Mais_jogados img {
-        width: 100%;
-        height: 130px;
+    /*Configurações globais fonte -----------------*/
+    .link_jogo {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+    .link_categoria {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+    .links a{
+        font-size: 0em;
+    } 
+    #logotipo a{
+        font-size: 0em;
     }
 
-    #ultimo_jogo img{
-        width: 100%;
-        height: 300px;
-    }
-    
-    #botao-jogar {
-        width: 93%;
-        margin-top: 10px;
-    }
-}
 
-/* Menu responsivo para dispositivos menores que 600px */
-@media (max-width: 600px) {
-    #menu {
-        font-size: 1em;
-        padding-left: 0;
-    }
-    
-    #menu nav a {
-        font-size: 1em;
-        padding: 5px;
-    }
-        
+    /*Menu----------------------------------------------------------------*/
+
+    /*Logotipo---------------*/
     #logotipo {
         font-size: 1.2em;
     }
-}
-
-/* Barra de pesquisa responsiva para dispositivos menores que 600px */
-@media (max-width: 600px) {
-    #pesquisa {
-        visibility: hidden;
-    }
     
-    #busca-text {
-        visibility: hidden;
+    #logotipo img{
+        width: 90px;
     }
-    
-    #botao-pesquisar {
-        visibility: hidden;
-    }
-}
 
-/* Login e Imagem de Usuário responsivos para dispositivos menores que 600px */
-@media (max-width: 600px) {
+    /*Menu Navegação-----------------------------*/
+
+    #menu{
+        font-size: 1em;
+        margin: auto;
+    }
+
+    #menu nav a {
+        font-size: 1em;
+        padding: 5px;
+        
+    }
+
+    /*Parte de login do usuario-------------------*/
     #login {
         padding: 20px;
     }
@@ -519,36 +475,77 @@ footer{
     #usuario_font2 {
         font-size: 0em;
     }
-}
 
-/* Imagem de Classe responsiva para dispositivos menores que 600px */
-@media (max-width: 600px) {
-    .link_jogo img {
+
+    /*Barra pesquisa--------------------------------------*/
+    #pesquisa {
+        visibility: hidden;
+    }
+    
+    #busca-text {
+        visibility: hidden;
+    }
+    
+    #botao-pesquisar {
+        visibility: hidden;
+    }
+
+    /*Ultimo Jogo ----------------------------------------*/
+   
+    #ultimo_jogo img{
+        width: 100%;
+        height: 300px;
+    }
+
+    #botao-jogar {
+        width: 93%;
+        margin-top: 10px;
+        
+    }
+
+    /* Mais Jogados -----------------------------------------*/
+
+    .Mais_jogados img{
+        width: 100%;
+        height: 130px;
+    }
+
+    /* Jogando Agora -----------------------------------------*/
+    .Imagens_jogando_agora {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Jogando_agora img {
         width: 100%;
     }
-}
 
-/* Tags <a> nos elementos da seção "Mais Jogados no Momento" para dispositivos menores que 600px */
-/* Tags <a> nos elementos da seção "Categorias" para dispositivos menores que 600px */
-@media (max-width: 600px) {
-    .link_jogo {
-        font-size: 14px; /* Tamanho da fonte reduzido */
+    /* Zerados ------------------------------------------------*/
+    .Imagens_zerados {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .link_categoria {
-        font-size: 14px; /* Tamanho da fonte reduzido */
+    
+    .Zerados img {
+        width: 100%;
     }
-}
 
-/* Suporte e Configurações da  calsse  "Links" para dispositivos menores que 600px */
-@media (max-width: 600px){
-    .links a{
-        font-size: 0em;
-    }    
-}
-
-/* logotipo control_games da secção logotipo para dispositivos menores que 600px */
-@media (max-width: 600px){
-    #logotipo a{
-        font-size: 0em;
+    /* Categorias --------------------------------------------*/
+    .Imagens_categoria {
+        grid-template-columns: repeat(2, 1fr);
     }
+    
+    .Categoria img {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Não Recomendados --------------------------------------------*/
+    .Imagens_nrecomendado {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .Nao_recomendados img {
+        width: 100%;
+    }
+
+
 }

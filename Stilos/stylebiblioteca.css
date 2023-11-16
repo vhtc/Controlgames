@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Salsa&display=swap');
@@ -163,13 +164,12 @@ header{
 }
 /*Termino da barra de pesquisa---------------------------------------------------------------------------------------------------------------------*/
 
-/*Main----------------------------------------------------------------------------------------------------------------------------*/
+/*Main (corpo)-------------------------------------------------------------------------------------------------------------------------------------*/
 
 main{
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
-    background-color: var(--cor1);
     padding: 20px;
     text-align: center;
 }
@@ -197,90 +197,71 @@ main{
     border-top: 1px solid white;
     height: 0;
     margin: 0 5px;
-    
-    
 }
 
-/*secção artigo----------------------------------------------------------------------------------------------------------------------*/
-#foto_box{
-    width: 500px;
-    margin: auto;
+/*Jogos----------------------------------------------------------------------------------------------------------------------------*/
+
+.Jogos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px; /* Define o espaçamento entre as imagens */
 }
 
-.info{
-    display: flex;
-    padding: 50px 0px 50px 0px;
+.Jogos img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    transition-duration: 0.8s;
 }
 
-
-.info aside{
-    width: 45vw;
-    color:  white;
+.link_jogo{ /*Configuração global para todas as sections em relação ao link tanto da img e do texto que foi desativada a função :hover  peguei do style primmiero pronto*/
+    text-decoration: none;
     font-family: var(--fonte-padrao);
     font-weight: 600;
-    text-align: justify;
-}
-
-.info aside h2{
-    font-family: var(--fonte-titulo2);
-    text-align: center;
-}
-
-ul{
-    list-style-type: none;
-    width: 39vw;
-}
-
-li{
-    text-align: left;
     color: white;
-    font-family: var(--fonte-padrao);
-    font-weight: 600;
+    font-size: 16px;
+    transition-duration: 0.8s;
+    padding: 5px;
 }
 
-
-
-ul li p{
-    display: inline;
+.link_img_jogo img:hover{
+    transform: scale(1.1);
 }
+
 
 /*Botões----------------------------------------------------------------------------------------------------------------------*/
 
-#botoes{
+#botao_cadastrar_jogo{
     display: flex;
-    justify-content: space-between;
-    
-}
-
-#botoes a{
-    align-items: center;
-    width: 130px;
+    width: 180px;
     height: 20px;
     padding: 15px;
     border-radius: 15px;
     border: 2px solid black;
-    color: white;
     font-family: var(--fonte-padrao);
-    text-decoration: none;
-    background-image: linear-gradient(to right ,#44a3e3 4.24% , #4471E3 79.05% , #4944E3 100%);
+    background-image: linear-gradient(to right ,#FF7A00 4.24% , #FFB800 79.05% , #FF7A00 100%);
     transition: 0.8s;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
 }
 
-#botoes #botao_remover{
-    background-image: linear-gradient(to right ,#E61717 4.24% , #B33636 79.05% , #804040 100%); 
+#botao_cadastrar_jogo a{
+    text-decoration: none;
+
 }
 
-#botoes a:hover{
+#botao_cadastrar_jogo:hover{
     transform: scale(1.2);
 }
+
+
 
 /*Footer----------------------------------------------------------------------------------------------------------------------*/
 
 footer{
     background-color: var(--cor0);
-    width: 100%;
-    height: 20vh;
-    
 }
 .rodape{
     display: flex;
@@ -328,8 +309,11 @@ footer{
     /* Seção Não Recomendados para dispositivos menores que 600px */
 
     /*Configurações globais fonte -----------------*/
-    main section ul , aside{
-        font-size: 14px;
+    .link_jogo {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+    .link_categoria {
+        font-size: 14px; /* Tamanho da fonte reduzido */
     }
     .links a{
         font-size: 0em;
@@ -337,7 +321,6 @@ footer{
     #logotipo a{
         font-size: 0em;
     }
-
 
     /*Menu----------------------------------------------------------------*/
 
@@ -394,34 +377,13 @@ footer{
     #botao-pesquisar {
         visibility: hidden;
     }
-    
-    /*conteudo article ---------------------------------------*/
 
-    .info{
-        display: block;
-    }
 
-    .info ul{
-        margin: auto;
-        margin-left: 20vw;
-        padding-bottom: 50px;
-    }
-
-    .info aside{
-        margin: auto;
-    }
+    /*jogos---------------------------------------------------*/
     
-    /* foto-----------------------------------------------------*/
-
-    #foto_box{
-        width: 250px;
+    .Jogos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px; /* Define o espaçamento entre as imagens */
     }
-    
-    /* footer-----------------------------------------------------*/
-    footer{
-        position: absolute;
-        bottom: auto;
-        height: auto;
-    }
-    
 }

@@ -23,7 +23,9 @@
 }
 
 body{
-    background-color: var(--cor1);
+    /* background-color: var(--cor1); */
+    background-image: linear-gradient(to bottom ,#023E62 48.62%, #010A26 96.01%  , #024872 100% );;
+
 }
 
 /*Header-------------------------------------------------------------------------------*/
@@ -163,17 +165,16 @@ header{
 }
 /*Termino da barra de pesquisa---------------------------------------------------------------------------------------------------------------------*/
 
-/*Main----------------------------------------------------------------------------------------------------------------------------*/
+/*Main (corpo)-------------------------------------------------------------------------------------------------------------------------------------*/
 
 main{
-    min-width: 300px;
     max-width: 1000px;
+    height: 100vh;
     margin: auto;
-    background-color: var(--cor1);
     padding: 20px;
     text-align: center;
+    
 }
-
 /*divisão das Secções----------------------------------------------------------------------------------------------------------------------------*/
 
 .divisao{
@@ -196,81 +197,49 @@ main{
     flex: 1;
     border-top: 1px solid white;
     height: 0;
-    margin: 0 5px;
-    
+    margin: 0 5px; 
     
 }
 
-/*secção artigo----------------------------------------------------------------------------------------------------------------------*/
-#foto_box{
-    width: 500px;
-    margin: auto;
-}
+/*secção lista plataformas-------------------------------------------------------------------------------------------------------------------------------------*/
 
-.info{
+#Plataformas {
     display: flex;
-    padding: 50px 0px 50px 0px;
-}
-
-
-.info aside{
-    width: 45vw;
-    color:  white;
-    font-family: var(--fonte-padrao);
-    font-weight: 600;
-    text-align: justify;
-}
-
-.info aside h2{
-    font-family: var(--fonte-titulo2);
-    text-align: center;
-}
-
-ul{
-    list-style-type: none;
-    width: 39vw;
-}
-
-li{
-    text-align: left;
-    color: white;
-    font-family: var(--fonte-padrao);
-    font-weight: 600;
-}
-
-
-
-ul li p{
-    display: inline;
-}
-
-/*Botões----------------------------------------------------------------------------------------------------------------------*/
-
-#botoes{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-#botoes a{
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 130px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid black;
+    
+}
+
+.Mostrar_plataformas {
+    margin-bottom: 10px; /* Adicione espaço entre os blocos */
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+}
+
+.link_img_plataforma {
+    margin-right: 30px; /* Adicione espaço entre a imagem e a descrição */
+}
+
+.link_plataforma {
+    display: block; /* Faz com que o link ocupe toda a largura disponível */
+}
+
+.link_img_plataforma img{
+    width: 80px;
+    transition-duration: 0.8s;
+}
+
+.Mostrar_plataformas a{
     color: white;
-    font-family: var(--fonte-padrao);
     text-decoration: none;
-    background-image: linear-gradient(to right ,#44a3e3 4.24% , #4471E3 79.05% , #4944E3 100%);
-    transition: 0.8s;
+    font-family: var(--fonte-padrao);
 }
 
-#botoes #botao_remover{
-    background-image: linear-gradient(to right ,#E61717 4.24% , #B33636 79.05% , #804040 100%); 
-}
 
-#botoes a:hover{
+.link_img_plataforma img:hover{
     transform: scale(1.2);
 }
 
@@ -278,9 +247,6 @@ ul li p{
 
 footer{
     background-color: var(--cor0);
-    width: 100%;
-    height: 20vh;
-    
 }
 .rodape{
     display: flex;
@@ -328,8 +294,11 @@ footer{
     /* Seção Não Recomendados para dispositivos menores que 600px */
 
     /*Configurações globais fonte -----------------*/
-    main section ul , aside{
-        font-size: 14px;
+    .link_jogo {
+        font-size: 14px; /* Tamanho da fonte reduzido */
+    }
+    .link_categoria {
+        font-size: 14px; /* Tamanho da fonte reduzido */
     }
     .links a{
         font-size: 0em;
@@ -337,7 +306,6 @@ footer{
     #logotipo a{
         font-size: 0em;
     }
-
 
     /*Menu----------------------------------------------------------------*/
 
@@ -381,7 +349,6 @@ footer{
         font-size: 0em;
     }
 
-
     /*Barra pesquisa--------------------------------------*/
     #pesquisa {
         visibility: hidden;
@@ -394,34 +361,18 @@ footer{
     #botao-pesquisar {
         visibility: hidden;
     }
-    
-    /*conteudo article ---------------------------------------*/
 
-    .info{
-        display: block;
-    }
-
-    .info ul{
-        margin: auto;
-        margin-left: 20vw;
-        padding-bottom: 50px;
+    /*Ultimo Jogo ----------------------------------------*/
+   
+    #ultimo_jogo img{
+        width: 100%;
+        height: 300px;
     }
 
-    .info aside{
-        margin: auto;
+    #botao-jogar {
+        width: 93%;
+        margin-top: 10px;
+        
     }
-    
-    /* foto-----------------------------------------------------*/
 
-    #foto_box{
-        width: 250px;
-    }
-    
-    /* footer-----------------------------------------------------*/
-    footer{
-        position: absolute;
-        bottom: auto;
-        height: auto;
-    }
-    
 }

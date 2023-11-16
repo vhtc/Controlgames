@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Stilos/stylegames.css">
     <title>Control Games</title>
-
-    <!-- local onde está as logos das plataformas -->
     <script src="https://kit.fontawesome.com/994a8be22c.js" crossorigin="anonymous"></script>
-    <!-- fechamento -->
 </head>
 <body>
     <header>
@@ -20,10 +17,8 @@
         <section id="menu">
             <nav>
                 <a href="index.html">Home</a>
-                <a href="#">Jogos</a>
-                <a href="#">Chat</a>
-                <a href="#">Progresso</a>
-                <a href="#">Plataformas</a>
+                <a href="biblioteca.html">Biblioteca</a>
+                <a href="plataformas.html">Plataformas</a>
             </nav>
         </section>
 
@@ -49,55 +44,35 @@
         <section>
             <div class="divisao">
                 <div class="linha"></div>
-                <p id="gameid" ></p>
+                <p id="gameid"></p>
                 <div class="linha"></div>
             </div>
-            <span id="fotoid"></span>
+
+                <div id="foto_box"><span id="fotoid"></span></div>
+
             <article class="info">
                 <ul>
-                    <li>Plataforma : <span id="plataformaid"></span> <span id="plataformaokid"></span></li>
-                    <li>Status : <span id="statusid"></span></li>
-                    <li>Categoria : <span id="categoriaid"></span></li>
-                    <li>Progresso : <span id="progressoid"></span></li>
-                    <li>Recomendo : <span id="recomendoid"></span></li>
-                    <li>Ano de Lançamento : <span id="anoid"></span></li>
-                    <li>Versão : <span id="versaoid"></span></li>
+                    <li>Plataforma : <p id="plataformaid"></p> <span id="plataformaokid"></span></li>
+                    <li>Status : <p id="statusid"></p></li>
+                    <li>Categoria : <p id="categoriaid"></p></li>
+                    <li>Progresso : <p id="progressoid"></p></li>
+                    <li>Recomendo : <p id="recomendoid"></p></li>
+                    <li>Ano de Lançamento : <p id="anoid"></p></li>
+                    <li>Versão : <p id="versaoid"></p></li>
                 </ul>
 
                 <aside>
                     <h2>Descrição</h2>
-                    <p><span id="descricaoid"></span> </p>
+                    <p id="descricaoid"></p>
                 </aside>
-
             </article>
-
-            <script>
-                // script para linkar o crud do game na tela game.html 
-                document.getElementById("gameid").innerHTML = localStorage.getItem("gameid");
-                document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
-                document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
-                document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
-                document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
-                document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
-                document.getElementById("anoid").innerHTML = localStorage.getItem("anoid");
-                document.getElementById("versaoid").innerHTML = localStorage.getItem("versao");
-                document.getElementById("descricaoid").innerHTML = localStorage.getItem("descricaoid");
-                
-                localStorage.getItem('fotoid', fotoid); 
-                document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
-                document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid;
-            </script>
-            <!-- Não juntar esses dois scripts -->
-            <script>
-                // script para aparecer a logo da plataforma 
-                localStorage.getItem('plataformaokid', plataformaokid);
-                document.getElementById("plataformaokid").innerHTML = localStorage.getItem("plataformaokid");
-                document.getElementById("plataformaokid").innerHTML = '<span>' + txt + '</span>' + plataformaokid;
-            </script>
-            <!-- abertura onde ta salvo os scripts da tela game.html  -->
-            <script src="JS/game.js"></script>
-
         </section>
+
+        <section id="botoes">
+            <a id="botao_editar" href="">Editar Jogo</a>
+            <a id="botao_remover" href="">Remover Jogo</a>
+        </section>
+
     </main>
     <footer>
         <section class="rodape">
@@ -107,11 +82,37 @@
             </div>
             
             <div class="links">
-                <a href="#"><img src="imagens/botoes/Customer Support.png" alt="suporte">Suporte</a>
+                <a href="suporte.html"><img src="imagens/botoes/Customer Support.png" alt="suporte">Suporte</a>
                 <a href="#"><img src="imagens/botoes/Settings.png" alt="configurações">Configurações</a>
             </div>
         </section>
     </footer>
-    
+
+    <script>
+        //AQUI ESTOU FAZENDO O CRUD DO JOGO ONDE TODOS OS DADOS ESTAO EM game.js
+        document.getElementById("gameid").innerHTML = localStorage.getItem("gameid",gameid);
+        document.getElementById("plataformaid").innerHTML = localStorage.getItem("plataformaid");
+        document.getElementById("statusid").innerHTML = localStorage.getItem("statusid");
+        document.getElementById("categoriaid").innerHTML = localStorage.getItem("categoriaid");
+        document.getElementById("progressoid").innerHTML = localStorage.getItem("progressoid");
+        document.getElementById("recomendoid").innerHTML = localStorage.getItem("recomendoid");
+        document.getElementById("anoid").innerHTML = localStorage.getItem("anoid");
+        document.getElementById("versaoid").innerHTML = localStorage.getItem("versao");
+        document.getElementById("descricaoid").innerHTML = localStorage.getItem("descricaoid");
+
+        localStorage.getItem('fotoid', fotoid);
+        document.getElementById("fotoid").innerHTML = localStorage.getItem("fotoid");
+        document.getElementById("fotoid").innerHTML = '<span>' + txt + '</span>' + fotoid; 
+
+    </script>
+
+    <script>
+        // script para aparecer a logo da plataforma 
+        localStorage.getItem('plataformaokid', plataformaokid);
+        document.getElementById("plataformaokid").innerHTML = localStorage.getItem("plataformaokid");
+        document.getElementById("plataformaokid").innerHTML = '<span>' + txt + '</span>' + plataformaokid;
+    </script>
+
+    <script src="JS/game.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 :root{
     --cor0: #020416;
-    --cor1: #010A26;
+    --cor1: #010a26;
     --cor2: #0d9fff;
     --cor3: #00484f;
     --cor4: #1c004f;
@@ -163,13 +163,12 @@ header{
 }
 /*Termino da barra de pesquisa---------------------------------------------------------------------------------------------------------------------*/
 
-/*Main----------------------------------------------------------------------------------------------------------------------------*/
+/*Main (corpo)-------------------------------------------------------------------------------------------------------------------------------------*/
 
 main{
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-    background-color: var(--cor1);
     padding: 20px;
     text-align: center;
 }
@@ -201,86 +200,65 @@ main{
     
 }
 
-/*secção artigo----------------------------------------------------------------------------------------------------------------------*/
-#foto_box{
-    width: 500px;
-    margin: auto;
+/*Secção Principais duvidas article----------------------------------------------------------------------------------------------------------------------*/
+
+aside{
+    color: white;
 }
 
-.info{
-    display: flex;
-    padding: 50px 0px 50px 0px;
-}
-
-
-.info aside{
-    width: 45vw;
-    color:  white;
-    font-family: var(--fonte-padrao);
-    font-weight: 600;
-    text-align: justify;
-}
-
-.info aside h2{
-    font-family: var(--fonte-titulo2);
-    text-align: center;
-}
-
-ul{
-    list-style-type: none;
-    width: 39vw;
-}
-
-li{
+aside h2{
     text-align: left;
-    color: white;
+    padding-bottom: 10px;
+}
+
+aside p{
     font-family: var(--fonte-padrao);
-    font-weight: 600;
+    font-size: 16px;
+    text-align: justify;
+    padding-bottom: 20px;
 }
 
+/*aside watsap----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-
-ul li p{
-    display: inline;
-}
-
-/*Botões----------------------------------------------------------------------------------------------------------------------*/
-
-#botoes{
+#suporte{
     display: flex;
-    justify-content: space-between;
-    
-}
-
-#botoes a{
+    flex-direction: column;
     align-items: center;
-    width: 130px;
-    height: 20px;
-    padding: 15px;
-    border-radius: 15px;
-    border: 2px solid black;
-    color: white;
-    font-family: var(--fonte-padrao);
+    padding-top: 25px;
+}
+
+#suporte_links {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#suporte_links a {
+    margin: auto;
+    padding-right: 25px;
     text-decoration: none;
-    background-image: linear-gradient(to right ,#44a3e3 4.24% , #4471E3 79.05% , #4944E3 100%);
-    transition: 0.8s;
+    font-family: var(--fonte-padrao);
+    color: white;
 }
 
-#botoes #botao_remover{
-    background-image: linear-gradient(to right ,#E61717 4.24% , #B33636 79.05% , #804040 100%); 
+#suporte img{
+    width: 80px;
+    transition-duration: 0.8s;
 }
 
-#botoes a:hover{
+#suporte_links a:hover img {
     transform: scale(1.2);
 }
 
-/*Footer----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/*Footer--------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 footer{
     background-color: var(--cor0);
-    width: 100%;
-    height: 20vh;
-    
 }
 .rodape{
     display: flex;
@@ -326,11 +304,9 @@ footer{
 
 @media(max-width: 900px){
     /* Seção Não Recomendados para dispositivos menores que 600px */
-
+    
     /*Configurações globais fonte -----------------*/
-    main section ul , aside{
-        font-size: 14px;
-    }
+    
     .links a{
         font-size: 0em;
     } 
@@ -338,6 +314,13 @@ footer{
         font-size: 0em;
     }
 
+    article aside{
+        font-size: 16px;
+    }
+
+    article aside p{
+        font-size: 14px;
+    }
 
     /*Menu----------------------------------------------------------------*/
 
@@ -394,34 +377,9 @@ footer{
     #botao-pesquisar {
         visibility: hidden;
     }
-    
-    /*conteudo article ---------------------------------------*/
 
-    .info{
-        display: block;
+    /*Imagem do watts--------------------------------------*/
+    #suporte_links img{
+        width: 50px;
     }
-
-    .info ul{
-        margin: auto;
-        margin-left: 20vw;
-        padding-bottom: 50px;
-    }
-
-    .info aside{
-        margin: auto;
-    }
-    
-    /* foto-----------------------------------------------------*/
-
-    #foto_box{
-        width: 250px;
-    }
-    
-    /* footer-----------------------------------------------------*/
-    footer{
-        position: absolute;
-        bottom: auto;
-        height: auto;
-    }
-    
 }
