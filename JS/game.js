@@ -1,5 +1,5 @@
 // JSON DOS JOGOS
-const jogosJSON = JSON.parse(localStorage.getItem('teste4')) || { //editando vhtc
+const jogosJSON = JSON.parse(localStorage.getItem('teste4')) || {
     "CODMW3": {
         "id": "CODMW3",
         "game": "Call of Duty: Modern Warfare 3",
@@ -208,22 +208,16 @@ const jogosJSON = JSON.parse(localStorage.getItem('teste4')) || { //editando vht
         "foto": "imagens/Jogos img menor/insurgency.jpg",
         "versao": "Física"
     }
-};
+    
+}
 
 var Gamesid, jogoSelecionado, plataformaok, jogoSelecionado, gameimg; //Variavel global, não mexer
 
-// Recupera os games do localStorage, não está mais usando
-// const gamesJSON = JSON.parse(localStorage.getItem('teste4')) || {};
-
 function abrirgame(Jogo) {
 
-    if (jogosJSON[`${Jogo.id}`]) {
-        jogoSelecionado = jogosJSON[`${Jogo.id}`];
-    } else {
-        jogoSelecionado = jogosJSON[Jogo.id]; // Retorna jogo aleatorio se não for encontrado
-    }
+    // jogoSelecionado = jogosJSON[Jogo.id];
 
-    // 
+    jogoSelecionado = jogosJSON[Jogo];
 
     if (jogoSelecionado.plataforma == 'Steam') {
         plataformaok = '<a class="fa-brands fa-steam">'; /*Logo da steam sendo colada  na varaivel plataformak , o mesmo raciocinio acontece nos elses abaixo */
@@ -238,7 +232,12 @@ function abrirgame(Jogo) {
         plataformaok = '<i class="fa-sharp fa-solid fa-desktop"></i>'
     }
 
-    gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
+    // simplificando imagem pra não ficar grande no código
+    // gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
+    // gameimg = '<img src="' + jogoSelecionado.foto + '" style="border-radius: 20px;">';
+    // gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%">';
+    // gameimg = '<img src="' + jogoSelecionado.foto + '" style="width: 100%; border-radius: 20px;">';
+    gameimg = '<img id="img_game" src="' + jogoSelecionado.foto + '">';
 
 
 
@@ -257,14 +256,9 @@ function abrirgame(Jogo) {
     //Fim Get/Set
 }
 
-
-// preciso saber o que é isso vhtc | descobri o que foi, criou ações fora de funções, toda vez que a plataforma acessar o script ele vai acessar o botao remover e editar, dando conflito na lista de games
-
 // var botao_remover = document.getElementById('botao_remover');
 // var botao_editar = document.getElementById('botao_editar');
-
 // botao_remover.addEventListener('click', function() {confirmacao(1);});
-
 // botao_editar.addEventListener('click', function() {confirmacao(2);});
 
 function confirmacao(id) {
@@ -280,22 +274,21 @@ function confirmacao(id) {
     }
 }
 
-
-// a partir daqui adicionar codigo automatico na tela bibliotecavhtc
+// a partir daqui adicionar codigo automatico na tela biblioteca e também adicionar o game em um json no cache
 
 function adicionarGame() {
 
-    const id = document.getElementById('id').value;
-    const game = document.getElementById('game').value;
-    const foto = document.getElementById('foto').value;
-    const plataforma = document.getElementById('plataforma').value;
-    const status1 = document.getElementById('status1').value;
-    const categoria = document.getElementById('categoria').value;
-    const progresso = document.getElementById('progresso').value;
-    const recomendo = document.getElementById('recomendo').value;
-    const ano = document.getElementById('ano').value;
-    const versao = document.getElementById('versao').value;
-    const descricao = document.getElementById('descricao').value;
+    const id = document.getElementById('id_input').value;
+    const game = document.getElementById('nome_input').value;
+    const foto = document.getElementById('capa_input').value;
+    const plataforma = document.getElementById('plataformas_input').value;
+    const status1 = document.getElementById('status_input').value;
+    const categoria = document.getElementById('categoria_input').value;
+    const progresso = document.getElementById('progresso_input').value;
+    const recomendo = document.getElementById('recomendo_input').value;
+    const ano = document.getElementById('ano_input').value;
+    const versao = document.getElementById('versao_input').value;
+    const descricao = document.getElementById('descricao_input').value;
     
     jogosJSON[`${id}`] = {
         "id": id,
@@ -316,7 +309,6 @@ function adicionarGame() {
     limparFormulario();
 }
 
-
 function atualizarListaGames() {
     // gamesContainer.innerHTML = '';
     let x = '';
@@ -328,7 +320,7 @@ function atualizarListaGames() {
             // gameDiv.innerHTML = `<a id="${game.id}" href="game.html" onclick='abrirgame(this)'>${imggame} ${game.game}</a>`;
             x += `
             <div class="Imagem_jogos">
-                <a class="link_img_jogo" href="game.html" id="${game.id}" onclick="abrirgame(this)">${imggame}</a>
+                <a class="link_img_jogo" href="game.html" onclick="abrirgame('${game.id}')">${imggame}</a>
                 <a class="link_jogo" href="game.html">${game.game}</a>
             </div>`;
             // gamesContainer.appendChild(gameDiv);
@@ -336,6 +328,7 @@ function atualizarListaGames() {
     }
     gamesContainer.innerHTML = x;
 }
+
 function limparFormulario() {
     formGame.reset();
 }
@@ -343,4 +336,3 @@ function limparFormulario() {
 function salvarGamesLocalmente() {
     localStorage.setItem('teste4', JSON.stringify(jogosJSON));
 }
-

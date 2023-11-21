@@ -215,6 +215,7 @@ main{
 
 .info aside{
     width: 45vw;
+    height: 300px;
     color:  white;
     font-family: var(--fonte-padrao);
     font-weight: 600;
@@ -224,6 +225,18 @@ main{
 .info aside h2{
     font-family: var(--fonte-titulo2);
     text-align: center;
+}
+
+#img_game{
+    border-radius: 20px;
+    width: 500px;
+    height: 250px;
+}
+
+#descricaoid{
+    width: 535px;
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 ul{
@@ -279,7 +292,7 @@ ul li p{
 footer{
     background-color: var(--cor0);
     width: 100%;
-    height: 20vh;
+    height: 13vh;
     
 }
 .rodape{
@@ -403,18 +416,44 @@ footer{
 
     .info ul{
         margin: auto;
-        margin-left: 20vw;
+        margin-left: 10vw;
         padding-bottom: 50px;
+    }
+
+    .info ul li{
+        width: 200px;
     }
 
     .info aside{
         margin: auto;
     }
     
+
     /* foto-----------------------------------------------------*/
 
     #foto_box{
         width: 250px;
+        height: 200px;
+    }
+
+    #img_game{
+        border-radius: 20px;
+        width: 250px;
+        height: 150px;
+    }
+    
+
+    /*conteudo descrição---------------------------------------*/
+
+    #box_descricao{
+        width: 250px;
+    }
+
+    #descricaoid{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
     }
     
     /* footer-----------------------------------------------------*/
